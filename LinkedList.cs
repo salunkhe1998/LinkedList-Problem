@@ -63,6 +63,19 @@ namespace LinkedListAssignment
 
         }
 
+        public void pop()
+        {
+            if (head == null)
+            {
+                Console.Write("Stack is empty");
+                return;
+            }
+
+            head = head.next;
+            Console.WriteLine("\nFirst Element has been Deleted");
+
+        }
+
 
         public void Display()
         {
