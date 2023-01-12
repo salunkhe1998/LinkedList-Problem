@@ -72,7 +72,7 @@ namespace LinkedListAssignment
             }
 
             head = head.next;
-            Console.WriteLine("\nLast Element has been Deleted");
+            Console.WriteLine("\nFirst Element has been Deleted");
 
         }
 
@@ -97,6 +97,28 @@ namespace LinkedListAssignment
                 }
                 Console.WriteLine("\nThe linkedlist is modified");
             }
+
+        }
+
+        public void MsTest(int x)
+        {
+            Node temp = head;
+
+            while (temp != null)
+            {
+
+                if (temp.data == x)
+                {
+                    Console.WriteLine(temp.data + "==" + x + "(True)");
+                }
+                else
+                {
+                    Console.WriteLine(temp.data + "!=" + x);
+                }
+                temp = temp.next;
+            }
+
+
 
         }
 
