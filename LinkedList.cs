@@ -31,6 +31,38 @@ namespace LinkedListAssignment
             Console.WriteLine("{0} is inserted in Linked List.", value);
         }
 
+        public Node InsertAtPerticularPosition(int position, int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+
+            }
+            Console.WriteLine("\nInserted value is : " + data);
+            return head;
+
+        }
+
 
         public void Display()
         {
@@ -41,7 +73,7 @@ namespace LinkedListAssignment
                 Console.WriteLine("Linked list is empty");
             }
             Console.WriteLine();
-            Console.WriteLine("Display Method is Executed");
+            //Console.WriteLine("Display Method is Executed");
 
             while (temp != null)
             {
